@@ -1,8 +1,9 @@
 const express = require('express');
-const { sequelize } = require('./models');
+const { sequelize, Flashcard } = require('./models');
 
 const app = express();
 const port = 3335;
+app.use(express.json());
 
 app.get('/', (req, res) => {
 	res.send('<h1>Flashcard API</h1>');
